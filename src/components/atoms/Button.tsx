@@ -17,4 +17,4 @@ const Button = ({children}: ButtonProps) => {
 
 export default Button
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div<ButtonProps>``
