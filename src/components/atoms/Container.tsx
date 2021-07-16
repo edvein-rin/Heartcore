@@ -2,16 +2,20 @@ import { PropsWithChildren } from 'react'
 import styled from 'styled-components/macro'
 
 
-const Container = ({children}: PropsWithChildren<{}>) => {
+export interface ContainerProps extends PropsWithChildren<{}> {
+  className?: string
+}
+
+const Container = ({children, className}: ContainerProps) => {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       {children}
     </Wrapper>
   )
 }
 
-export default Container
-
-export const Wrapper = styled.div`
-  max-width: 1200px;
+export const Wrapper = styled.div<ContainerProps>`
+  max-width: 1140px;
 `
+
+export default Container
