@@ -1,21 +1,35 @@
 import styled from 'styled-components/macro'
-import { Link } from 'react-router-dom'
+
+import Container, { ContainerProps } from '../atoms/Container'
+import logo from '../../assets/logo.svg'
 
 
 function Header () {
   return (
     <Wrapper>
-      <Link to='/'>Home</Link>
-      <Link to='/about'>About</Link>
-      <Link to='/thesis'>Thesis</Link>
-      <Link to='/companies'>Companies</Link>
-      <Link to='/team'>Team</Link>
-      <Link to='/values'>Values</Link>
-      <Link to='/insights'>Insights</Link>
+      <HeaderContainer>
+        <img alt='Heartcore' src={logo}></img>
+        <div>Menu</div>
+      </HeaderContainer>
     </Wrapper>
   )
 }
 
-const Wrapper = styled.header``
+export const Wrapper = styled.header`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const HeaderContainer = styled(Container)<ContainerProps>`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 18px 0;
+`
+
 
 export default Header
