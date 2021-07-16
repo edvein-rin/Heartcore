@@ -1,9 +1,16 @@
 import styled from 'styled-components/macro'
+import Container from '../atoms/Container'
+import Section from '../atoms/Section'
+
 
 function Home () {
   return (
     <Wrapper>
-      Home Page
+      <Section>
+        <Container>
+          Home Page
+        </Container>
+      </Section>
     </Wrapper>
   )
 }
@@ -11,7 +18,6 @@ function Home () {
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
 `
 
 export default Home
