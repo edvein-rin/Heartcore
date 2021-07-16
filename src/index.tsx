@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { HashRouter as Router } from 'react-router-dom'
 
 import 'normalize.css'
 
@@ -12,7 +13,9 @@ ReactDOM.render(
   <React.StrictMode>
     <GlobalColors />
     <GlobalStyles />
-    <App />
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 )
