@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 
 
 interface ButtonProps extends PropsWithChildren<{}> {
-  type: 'round' | null
+  style: 'round' | null
 }
 
 
@@ -17,4 +17,6 @@ const Button = ({children}: ButtonProps) => {
 
 export default Button
 
-export const Wrapper = styled.div<ButtonProps>``
+export const Wrapper = styled.div`
+  font-size: bold;
+`
