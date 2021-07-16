@@ -19,16 +19,14 @@ export const Wrapper = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
 `
 
 const HeaderContainer = styled(Container)<ContainerProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  width: 100%;
-
-  padding: 18px 0;
 `
 
 
