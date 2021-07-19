@@ -1,23 +1,45 @@
 import styled from 'styled-components/macro'
+
 import Container from '../atoms/Container'
 import Section from '../atoms/Section'
+import Heading from '../molecules/Heading'
+import Title from '../atoms/Title'
+import Subtitle from '../atoms/Subtitle'
 
 
 function Home () {
   return (
     <Wrapper>
-      <Section>
+      <HeaderSection>
         <Container>
-          Home Page
+          <Heading align='center'>
+            <Title>Investing in happiness.</Title>
+            <Subtitle>Europe's consumer technology VC</Subtitle>
+          </Heading>
         </Container>
-      </Section>
+      </HeaderSection>
+      <CardsSection>
+        <Container>
+
+        </Container> 
+      </CardsSection>
     </Wrapper>
   )
 }
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
+`
+
+const HeaderSection = styled(Section)`
+  padding-top: 158px;
+  padding-bottom: 125px;
+`
+
+const CardsSection = styled(Section)`
+  
 `
 
 export default Home
