@@ -16,6 +16,7 @@ const Section = ({children, className}: SectionProps) => {
 
 export const Wrapper = styled.div<SectionProps>`
   display: flex;
+  flex-direction: column;
 
   width: 100%;
 
