@@ -1,39 +1,21 @@
-import { Route, Switch } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
-import Home from '../pages/Home'
-import About from '../pages/About'
-import Thesis from '../pages/Thesis'
-import Companies from'../pages/Companies'
-import Team from '../pages/Team'
-import Values from '../pages/Values'
-import Insights from '../pages/Insights'
-
-import Footer from './Footer'
 import Header from './Header'
+import Main from './Main'
+import Footer from './Footer'
 
 
-function App() {
+export default function App () {
   return (
     <Wrapper>
       <Header />
-      <main>
-        <Switch>
-          <Route path='/' exact><Home /></Route>
-          <Route path='/about'><About /></Route>
-          <Route path='/thesis'><Thesis /></Route>
-          <Route path='/companies'><Companies /></Route>
-          <Route path='/team'><Team /></Route>
-          <Route path='/values'><Values /></Route>
-          <Route path='/insights'><Insights /></Route>
-        </Switch>
-      </main>
+      <Main />
       <Footer />
     </Wrapper>
   )
 }
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -44,5 +26,3 @@ const Wrapper = styled.div`
     width: 100%;
   }
 `
-
-export default App

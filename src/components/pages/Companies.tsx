@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 
-function Companies () {
+
+export default function Companies () {
   return (
     <Wrapper>
       Companies Page
@@ -8,10 +9,8 @@ function Companies () {
   )
 }
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `
-
-export default Companies

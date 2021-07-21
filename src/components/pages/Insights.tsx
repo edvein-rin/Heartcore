@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 
-function Insights () {
+
+export default function Insights () {
   return (
     <Wrapper>
       Insights Page
@@ -8,10 +9,8 @@ function Insights () {
   )
 }
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `
-
-export default Insights

@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 
 
-function Footer () {
+export default function Footer () {
   return (
     <Wrapper>
       <Link to='/'>Home</Link>
@@ -16,8 +16,6 @@ function Footer () {
   )
 }
 
-const Wrapper = styled.footer`
+export const Wrapper = styled.footer`
   background-color: var(--gray-container-bg-color);
 `
-
-export default Footer

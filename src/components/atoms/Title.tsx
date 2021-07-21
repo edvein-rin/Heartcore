@@ -1,15 +1,15 @@
 import { PropsWithChildren } from 'react';
 import styled from 'styled-components/macro'
-import React from 'react'
 
 import { Wrapper as HeadingWrapper } from '../molecules/Heading'
 
 
-export interface TitleProps extends PropsWithChildren<{}> {
+export interface Props extends PropsWithChildren<{}> {
   align?: 'left' | 'right' | 'center'
 }
 
-export default function Title ({children, align = 'left'}: TitleProps) {
+
+export default function Title ({children, align = 'left'}: Props) {
   return (
     <Wrapper align={align}>
       <h1>{children}</h1>
@@ -17,7 +17,7 @@ export default function Title ({children, align = 'left'}: TitleProps) {
   )
 }
 
-export const Wrapper = styled.div<TitleProps>`
+export const Wrapper = styled.div<Props>`
   display: flex;
   justify-content: ${({align}) => {
     switch (align) {

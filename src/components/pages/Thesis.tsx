@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 
-function Thesis () {
+
+export default function Thesis () {
   return (
     <Wrapper>
       Thesis Page
@@ -8,10 +9,8 @@ function Thesis () {
   )
 }
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `
-
-export default Thesis

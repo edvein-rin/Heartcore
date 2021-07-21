@@ -2,11 +2,11 @@ import { PropsWithChildren } from 'react'
 import styled from 'styled-components/macro'
 
 
-export interface SectionProps extends PropsWithChildren<{}> {
+export interface Props extends PropsWithChildren<{}> {
   className?: string,
 }
 
-const Section = ({children, className}: SectionProps) => {
+export default function Section ({children, className}: Props) {
   return (
     <Wrapper className={className}>
       {children}
@@ -14,7 +14,7 @@ const Section = ({children, className}: SectionProps) => {
   )
 }
 
-export const Wrapper = styled.div<SectionProps>`
+export const Wrapper = styled.div<Props>`
   display: flex;
   flex-direction: column;
 
@@ -22,5 +22,3 @@ export const Wrapper = styled.div<SectionProps>`
 
   box-sizing: border-box;
 `
-
-export default Section

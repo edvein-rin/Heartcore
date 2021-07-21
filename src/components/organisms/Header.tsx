@@ -1,10 +1,10 @@
 import styled from 'styled-components/macro'
 
-import Container, { ContainerProps } from '../atoms/Container'
+import Container, { Props as ContainerProps } from '../atoms/Container'
 import logo from '../../assets/logo.svg'
 
 
-function Header () {
+export default function Header () {
   return (
     <Wrapper>
       <HeaderContainer>
@@ -24,11 +24,8 @@ export const Wrapper = styled.header`
   padding-bottom: 18px;
 `
 
-const HeaderContainer = styled(Container)<ContainerProps>`
+export const HeaderContainer = styled(Container)<ContainerProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
-
-
-export default Header

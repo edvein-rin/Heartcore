@@ -7,7 +7,7 @@ import Title from '../atoms/Title'
 import Subtitle from '../atoms/Subtitle'
 
 
-function Home () {
+export default function Home () {
   return (
     <Wrapper>
       <HeaderSection>
@@ -33,13 +33,11 @@ export const Wrapper = styled.div`
   justify-content: center;
 `
 
-const HeaderSection = styled(Section)`
+export const HeaderSection = styled(Section)`
   padding-top: 158px;
   padding-bottom: 125px;
 `
 
-const CardsSection = styled(Section)`
+export const CardsSection = styled(Section)`
   
 `
-
-export default Home

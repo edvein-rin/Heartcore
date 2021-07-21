@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 
-function About () {
+
+export default function About () {
   return (
     <Wrapper>
       About Page
@@ -8,10 +9,8 @@ function About () {
   )
 }
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `
-
-export default About

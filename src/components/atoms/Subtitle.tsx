@@ -4,18 +4,18 @@ import styled from 'styled-components/macro'
 import { Wrapper as HeadingWrapper } from '../molecules/Heading'
 
 
-interface SubtitleProps extends PropsWithChildren<{}> {
+export interface Props extends PropsWithChildren<{}> {
   align?: 'left' | 'right' | 'center'
 }
 
 
-function Subtitle ({children, align='left'}: SubtitleProps) {
+export default function Subtitle ({children, align='left'}: Props) {
   return (
     <Wrapper align={align}>{children}</Wrapper>
   )
 }
 
-export const Wrapper = styled.div<SubtitleProps>`
+export const Wrapper = styled.div<Props>`
   display: flex;
   justify-content: ${({align}) => {
     switch (align) {
@@ -36,6 +36,3 @@ export const Wrapper = styled.div<SubtitleProps>`
     line-height: 130%;
   }
 `
-
-export default Subtitle
-

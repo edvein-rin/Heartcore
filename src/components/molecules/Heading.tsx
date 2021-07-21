@@ -5,12 +5,12 @@ import styled from 'styled-components/macro'
 import { Wrapper as ContainerWrapper } from '../atoms/Container'
 
 
-interface HeadingProps extends PropsWithChildren<{}> {
+export interface Props extends PropsWithChildren<{}> {
   align?: 'left' | 'right' | 'center'
 }
 
 
-function Heading ({children, align = 'left'}: HeadingProps) {
+export default function Heading ({children, align = 'left'}: Props) {
   return (
     <Wrapper>
       {React.Children.map(children, child => {
@@ -23,7 +23,7 @@ function Heading ({children, align = 'left'}: HeadingProps) {
   )
 }
 
-export const Wrapper = styled.span<HeadingProps>`
+export const Wrapper = styled.span<Props>`
   display: flex;
   flex-direction: column;
 
@@ -35,6 +35,3 @@ export const Wrapper = styled.span<HeadingProps>`
     width: 100%;
   }
 `
-
-
-export default Heading

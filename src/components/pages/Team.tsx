@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 
-function Team () {
+
+export default function Team () {
   return (
     <Wrapper>
       Team Page
@@ -8,10 +9,8 @@ function Team () {
   )
 }
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `
-
-export default Team

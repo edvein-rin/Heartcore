@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 
-function Values () {
+
+export default function Values () {
   return (
     <Wrapper>
       Values Page
@@ -8,10 +9,8 @@ function Values () {
   )
 }
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `
-
-export default Values

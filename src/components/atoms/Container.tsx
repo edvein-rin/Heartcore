@@ -4,11 +4,12 @@ import styled from 'styled-components/macro'
 import { Wrapper as SectionWrapper } from '../atoms/Section'
 
 
-export interface ContainerProps extends PropsWithChildren<{}> {
+export interface Props extends PropsWithChildren<{}> {
   className?: string,
 }
 
-const Container = ({children, className}: ContainerProps) => {
+
+export default function Container ({children, className}: Props) {
   return (
     <Wrapper className={className}>
       {children}
@@ -16,7 +17,7 @@ const Container = ({children, className}: ContainerProps) => {
   )
 }
 
-export const Wrapper = styled.div<ContainerProps>`
+export const Wrapper = styled.div<Props>`
   display: flex;
 
   max-width: 1140px;
@@ -31,5 +32,3 @@ export const Wrapper = styled.div<ContainerProps>`
     align-self: center;
   }
 `
-
-export default Container
