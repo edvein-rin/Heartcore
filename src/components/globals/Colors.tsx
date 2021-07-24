@@ -1,23 +1,26 @@
 import { createGlobalStyle } from 'styled-components/macro'
 
 
+export type Color = 'white' | 'black' | 'light-gray' | 'gray' | 'dark-blue' | 'light-orange' | 'orange' | 'dark-orange' | 'light-yellow' | 'light-blue' | 'blue' | 'lighter-blue' | 'dark-green'
+
 export default createGlobalStyle`
   html {
-    --background-color: #fff;
-    --color: #2b2b2b;
-    --highlight-color: #f88e53;
+    --white: #fff;
+    --black: #2b2b2b;
+    --light-gray: #edf0f7;
+    --gray: #4d4d4d;
+    --dark-blue: #293b78;
+    --light-orange: #dfba84;
+    --orange: #f88e53;
+    --dark-orange: #893c01;
+    --light-yellow: #f9e39d;
+    --light-blue: #8cb8e1;
+    --blue: #0b5194;
+    --lighter-blue: #a8d7d1;
+    --dark-green: #1b5f57;
 
-    --gray-container-bg-color: #edf0f7;
-    --gray-container-color: #4d4d4d;
-    --blue-container-bg-color: #293b78;
-    --blue-container-color: #fff;
-    --orange-container-bg-color: #fdba84;
-    --orange-container-color: #893c01;
-    --yellow-container-bg-color: #f9e39d;
-    --yellow-container-color: #893c01;
-    --light-blue-container-bg-color: #8cb8e1;
-    --light-blue-container-color: #0b5194;
-    --green-container-bg-color: #a8d7d1;
-    --green-container-color: #1b5f57;
+    --background-color: var(--white);
+    --color: var(--black);
+    --highlight-color: var(--orange);
   }
 `
