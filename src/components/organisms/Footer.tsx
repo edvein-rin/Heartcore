@@ -44,13 +44,13 @@ export default function Footer () {
             <ImageLink alt='Twitter' src={rssIcon} to='https://heartcore.substack.com/' />
           </div>
           <LinkButton to='mailto:contact@heartcore.com' textCase='none' bold={false}>
-            <Typography variant='caption'>contact@heartcore.com</Typography>
+            <Typography variant='body2'>contact@heartcore.com</Typography>
           </LinkButton>
         </div>
         <div className='copyright'>
-          <Typography variant='caption'>All rights reserved © Heartcore</Typography>
+          <Typography variant='body2'>All rights reserved © Heartcore</Typography>
           <LinkButton to='https://uploads-ssl.webflow.com/6023c6394b9a4d541b90dcf4/60dc760184ef9d56a3055aca_20210630%20Privacy%20Policy%20.pdf' textCase='none' bold={false}>
-            <Typography variant='caption'>Privacy police</Typography>
+            <Typography variant='body2'>Privacy police</Typography>
           </LinkButton>
         </div>
       </FooterContainer>
