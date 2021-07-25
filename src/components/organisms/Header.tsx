@@ -16,10 +16,6 @@ export default function Header () {
 }
 
 export const Wrapper = styled.header`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   padding-top: 18px;
   padding-bottom: 18px;
 `
