@@ -26,6 +26,9 @@ export const Wrapper = styled.div<Props>`
   padding-left: 30px;
   padding-right: 30px;
 
+  margin-right: auto;
+  margin-left: auto;
+
   box-sizing: border-box;
 
   ${SectionWrapper} > & {
