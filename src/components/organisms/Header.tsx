@@ -2,6 +2,7 @@ import styled from 'styled-components/macro'
 
 import Container, { Props as ContainerProps } from '../atoms/Container'
 import logo from '../../assets/logo.svg'
+import MenuButton from '../atoms/MenuButton'
 
 
 export default function Header () {
@@ -9,7 +10,7 @@ export default function Header () {
     <Wrapper>
       <HeaderContainer>
         <img alt='Heartcore' src={logo}></img>
-        <div>Menu</div>
+        <MenuButton />
       </HeaderContainer>
     </Wrapper>
   )
