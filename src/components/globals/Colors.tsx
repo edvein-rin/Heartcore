@@ -10,8 +10,9 @@ export default createGlobalStyle`
     --light-gray: #edf0f7;
     --gray: #4d4d4d;
     --dark-blue: #293b78;
-    --light-orange: #dfba84;
-    --orange: #f88e53;
+    --lighter-orange: #dfba84;
+    --light-orange: #f88e53;
+    --orange: #f95d06;
     --dark-orange: #893c01;
     --light-yellow: #f9e39d;
     --light-blue: #8cb8e1;
