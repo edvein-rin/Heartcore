@@ -1,14 +1,19 @@
+import styled from 'styled-components/macro'
+
 import Button, { Props as ButtonProps } from './Button'
+import Typography from './Typography'
+import Burger from './Burger'
+import Spacer from './Spacer'
 
 
 export type Props = ButtonProps
 
-
-export default function MenuButton ({children}: Props) {
+export default function MenuButton (props: Props) {
   return (
-    <div>
-      {/* <Burger></Burger> */}
-      <Button>{children}</Button>
-    </div>
+    <Button {...props} display='flex'>
+      <Burger />
+      <Spacer size={10} axis='horizontal'></Spacer>
+      <Typography variant='caption'>Menu</Typography>
+    </Button>
   )
 }
