@@ -3,12 +3,12 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import { Wrapper as ContainerWrapper } from '../atoms/Container'
+import { Align } from '../atoms/Typography'
 
 
 export interface Props extends PropsWithChildren<{}> {
-  align?: 'left' | 'right' | 'center'
+  align?: Align,
 }
-
 
 export default function Heading ({children, align = 'left'}: Props) {
   return (
