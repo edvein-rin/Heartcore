@@ -74,10 +74,18 @@ export const Wrapper = styled.span<Props>`
           font-weight: 400;
           line-height: 130%;
         `
-      case 'caption':
+      
+      case 'body2':
         return css`
           font-size: 14px;
-          line-height: 17px;
+        `
+
+      case 'caption':
+        return css`
+          font-size: 12px;
+          line-height: 14px;
+          letter-spacing: 0.09em;
+          weight: 600;
         `
     }
   }}
