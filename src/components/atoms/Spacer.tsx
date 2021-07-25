@@ -9,8 +9,8 @@ export interface Props {
 
 const Spacer = styled.span<Props>`
   display: inline-block;
-  min-width: ${({axis, size}) => axis === 'vertical' ? 1 : size};
-  min-height: ${({axis, size}) => axis === 'horizontal' ? 1 : size};
+  min-width: ${({axis, size}) => axis === 'vertical' ? 1 : size + 'px'};
+  min-height: ${({axis, size}) => axis === 'horizontal' ? 1 : size + 'px'};
 `
 
 export default Spacer
