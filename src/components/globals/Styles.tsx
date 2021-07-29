@@ -16,4 +16,8 @@ export default createGlobalStyle`
 
     font-family: 'Gilroy-Regular', sans-serif;
   }
+
+  * {
+    box-sizing: border-box;
+  }
 `
