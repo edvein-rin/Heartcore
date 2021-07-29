@@ -34,7 +34,7 @@ export interface Props extends PropsWithChildren<{}> {
   font?: Font,
 }
 
-export default function Typography ({children, align, color, display, variant = 'body1', paragraph = false, opacity = 1, font = 'Gilroy-Regular'}: Props) {
+export default function Typography ({children, align, color, display, variant = 'body1', paragraph = false, opacity, font}: Props) {
   const tag = VariantTagMapping[variant]
  
   return (
