@@ -5,6 +5,7 @@ import twitterIcon from '../../assets/icons/twitter.svg'
 import linkedinIcon from '../../assets/icons/linkedin.svg'
 import rssIcon from '../../assets/icons/rss.svg'
 
+import breakpoints from '../globals/Breakpoints'
 import Container from '../atoms/Container'
 import LinkButton from '../atoms/LinkButton'
 import SubscribeLinkButton from '../atoms/SubscribeLink'
@@ -22,8 +23,8 @@ export default function Footer () {
         <SubscribeLinkButton />
         
         <div className='quote'>
-          <Typography color='gray' variant='h4'>
-            “It is only with the heart that one can see rightly; what is essential is invisible to the eye. ”
+          <Typography color='gray' variant='h5' font='Recoleta'>
+            “ It is only with the heart that one can see rightly; what is essential is invisible to the eye. ”
         </Typography>
         </div>
         <div className='links'>
@@ -79,11 +80,20 @@ export const Wrapper = styled.footer`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    
+    gap: 20px;
   }
 `
 
 export const FooterContainer = styled(Container)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 30px;
+
+  @media ${breakpoints.down('tablet')} {
+    grid-template-columns: 1fr;
+  }
+
+  @media ${breakpoints.up('tablet')} {
+    grid-template-columns: 1fr 1fr;
+  } 
 `
