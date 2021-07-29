@@ -1,9 +1,10 @@
-import { Link as RouterLink, LinkProps as RouterLinkProps } from "react-router-dom";
-import styled from "styled-components";
+import styled from 'styled-components/macro'
+import React from 'react'
 
-export type Props = RouterLinkProps
 
-export default styled(RouterLink)<RouterLinkProps>`
+export type Props = React.HTMLProps<HTMLAnchorElement>
+
+export default styled.a<Props>`
   &, &:link, &:visited, &:hover, &:active {
     text-decoration: none;
     color: inherit;
