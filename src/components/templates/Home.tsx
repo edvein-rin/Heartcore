@@ -19,7 +19,7 @@ export default function Home (props: Props) {
       <HeaderSection>
         <Container>
           <Heading align='center'>
-            <Title font='Recoleta'>{props.title}</Title>
+            <Title>{props.title}</Title>
             <Subtitle opacity={0.8}>{props.subtitle}</Subtitle>
           </Heading>
         </Container>
