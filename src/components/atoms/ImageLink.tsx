@@ -7,7 +7,7 @@ export interface Props extends LinkProps {
 
 export default function ImageLink (props: Props) {
   return (
-    <Link {...props}>
+    <Link href={props.href}>
       <img alt={props.alt} src={props.src}></img>
     </Link>
   )
