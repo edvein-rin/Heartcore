@@ -1,29 +1,27 @@
-import { PropsWithChildren } from 'react'
-import React from 'react'
 import styled from 'styled-components/macro'
 
 import { Wrapper as ContainerWrapper } from '../atoms/Container'
-import { Align } from '../atoms/Typography'
+import Typography, { Align } from '../atoms/Typography'
 
 
-export interface Props extends PropsWithChildren<{}> {
+export interface Props {
+  title: string,
+  subtitle: string,
+  description?: string,
   align?: Align,
 }
 
-export default function Heading ({children, align = 'left'}: Props) {
+export default function Heading ({title, subtitle, description, align}: Props) {
   return (
     <Wrapper>
-      {React.Children.map(children, child => {
-        if (React.isValidElement(child)) {
-          return React.cloneElement(child, {align})
-        }
-        return child
-      })}
+      <Typography variant='h1' paragraph font='Recoleta' align={align}>{title}</Typography>
+      <Typography variant='h5' align={align}>{subtitle}</Typography>
+      {description && <Typography align={align}>{description}</Typography>}
     </Wrapper>
   )
 }
 
-export const Wrapper = styled.span<Props>`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 

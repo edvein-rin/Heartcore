@@ -3,8 +3,6 @@ import styled from 'styled-components/macro'
 import Container from '../atoms/Container'
 import Section from '../atoms/Section'
 import Heading from '../molecules/Heading'
-import Title from '../atoms/Title'
-import Subtitle from '../atoms/Subtitle'
 
 
 export interface Props {
@@ -18,16 +16,17 @@ export default function Home (props: Props) {
     <Wrapper>
       <HeaderSection>
         <Container>
-          <Heading align='center'>
-            <Title>{props.title}</Title>
-            <Subtitle opacity={0.8}>{props.subtitle}</Subtitle>
-          </Heading>
+          <Heading
+            align='center'
+            title={props.title}
+            subtitle={props.subtitle}
+          />
         </Container>
       </HeaderSection>
       <CardsSection>
-        <Container>
-
-        </Container> 
+        <CardsContainer>
+          {/* <Card title='' subtitle=''></Card> */}
+        </CardsContainer> 
       </CardsSection>
     </Wrapper>
   )
@@ -46,4 +45,10 @@ export const HeaderSection = styled(Section)`
 
 export const CardsSection = styled(Section)`
   
+`
+
+export const CardsContainer = styled(Container)`
+  display: grid;
+  grid-template-columns: repeat(1fr, 7);
+  grid-template-rows: repeat(1fr, 8);
 `
