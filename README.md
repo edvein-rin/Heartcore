@@ -1,3 +1,3 @@
 # Heartcore
 
-My rewriting of the Heartcore web page for practicing React. All rights reserved by [Heartcore](https://www.heartcore.com/).
+A web page written for practicing React based on the [Heartcore](https://www.heartcore.com/) design, but with personal changes. 
