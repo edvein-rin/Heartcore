@@ -20,6 +20,7 @@ export default function Footer () {
       <FooterContainer>
         <img alt='Heartcore' src={logo}></img>
         <ButtonLink href='https://heartcore.substack.com/' color='light-orange'>subscribe to our newsletter ↗️</ButtonLink>
+        {/* TODO color and hover doesn't work */}
         
         <div className='quote'>
           <Typography color='grey' variant='h5' font='Recoleta'>
