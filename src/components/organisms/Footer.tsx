@@ -23,9 +23,9 @@ export default function Footer () {
         <SubscribeLinkButton />
         
         <div className='quote'>
-          <Typography color='gray' variant='h5' font='Recoleta'>
+          <Typography color='grey' variant='h5' font='Recoleta'>
             “ It is only with the heart that one can see rightly; what is essential is invisible to the eye. ”
-        </Typography>
+          </Typography>
         </div>
         <div className='links'>
           <FooterLink to='/about'>About</FooterLink>
@@ -44,13 +44,13 @@ export default function Footer () {
             <Spacer size={20} axis='horizontal'></Spacer>
             <ImageLink alt='Twitter' src={rssIcon} to='https://heartcore.substack.com/' />
           </div>
-          <LinkButton to='mailto:contact@heartcore.com' textCase='none' bold={false}>
+          <LinkButton to='mailto:contact@heartcore.com' textCase='none' bold={false} variant='no-style'>
             <Typography variant='body2'>contact@heartcore.com</Typography>
           </LinkButton>
         </div>
         <div className='copyright'>
           <Typography variant='body2'>All rights reserved © Heartcore</Typography>
-          <LinkButton to='https://uploads-ssl.webflow.com/6023c6394b9a4d541b90dcf4/60dc760184ef9d56a3055aca_20210630%20Privacy%20Policy%20.pdf' textCase='none' bold={false}>
+          <LinkButton to='https://uploads-ssl.webflow.com/6023c6394b9a4d541b90dcf4/60dc760184ef9d56a3055aca_20210630%20Privacy%20Policy%20.pdf' textCase='none' bold={false} variant='no-style'>
             <Typography variant='body2'>Privacy police</Typography>
           </LinkButton>
         </div>
@@ -63,7 +63,7 @@ export const Wrapper = styled.footer`
   padding-top: 60px;
   padding-bottom: 20px;
 
-  background-color: var(--light-gray);
+  background-color: var(--light-grey);
 
   & .quote {
     max-width: 405px;
