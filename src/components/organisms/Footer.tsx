@@ -24,7 +24,7 @@ export default function Footer () {
         
         <div className='quote'>
           <Typography color='grey' variant='h5' font='Recoleta'>
-            “ It is only with the heart that one can see rightly; what is essential is invisible to the eye. ”
+            “It is only with the heart that one can see rightly; what is essential is invisible to the eye.”
           </Typography>
         </div>
         <div className='links'>

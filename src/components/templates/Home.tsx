@@ -9,7 +9,7 @@ import Card from '../molecules/Card'
 
 
 export interface Props {
-  title: string,
+  header: string,
   subtitle: string,
 }
 
@@ -21,7 +21,7 @@ export default function Home (props: Props) {
         <Container>
           <Heading
             align='center'
-            title={props.title}
+            header={props.header}
             subtitle={props.subtitle}
           />
         </Container>
@@ -30,7 +30,7 @@ export default function Home (props: Props) {
         <CardsContainer>
           <Card
             overline='about'
-            title='100% consumer tech'
+            header='100% consumer tech'
             description='Specialization drives success'
             image={aboutCardImage}
             bgColor='blue'
@@ -39,7 +39,7 @@ export default function Home (props: Props) {
           />
           <Card
             overline='thesis'
-            title='Making people happy'
+            header='Making people happy'
             description='We invest in companies re-enchanting the world through technology'
             image={aboutCardImage}
             bgColor='light-grey'
@@ -48,7 +48,7 @@ export default function Home (props: Props) {
           />
           <Card
             overline='companies'
-            title={<span>Our <em>raison d'être</em></span>}
+            header={<span>Our <em>raison d'être</em></span>}
             description="We're proud to have been among the first investors in 85 category-defining consumer technology companies"
             image={aboutCardImage}
             bgColor='light-orange'
@@ -57,7 +57,7 @@ export default function Home (props: Props) {
           />
           <Card
             overline='team'
-            title='Global at heart'
+            header='Global at heart'
             description='A group of investors in love with our craft and passionate about entrepreneurship'
             image={aboutCardImage}
             bgColor='light-yellow'
@@ -66,7 +66,7 @@ export default function Home (props: Props) {
           />
           <Card
             overline='values'
-            title='Truth + Love = Growth'
+            header='Truth + Love = Growth'
             description='Radically different venture capital'
             image={aboutCardImage}
             bgColor='light-blue'
@@ -75,7 +75,7 @@ export default function Home (props: Props) {
           />
           <Card
             overline='insights'
-            title='Sharing is caring'
+            header='Sharing is caring'
             description='Everything you’ve always wanted to know about consumer technology'
             image={aboutCardImage}
             bgColor='lighter-blue'

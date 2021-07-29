@@ -9,7 +9,7 @@ import Typography from '../atoms/Typography'
 
 export interface Props {
   overline: React.ReactNode,
-  title: React.ReactNode,
+  header: React.ReactNode,
   description: React.ReactNode,
   bgColor: Color,
   textColor?: Color,
@@ -21,7 +21,7 @@ export default function Card (props: Props) {
   return (
     <Wrapper {...props}>
       <Typography variant='overline' paragraph>{props.overline}</Typography>
-      <Typography variant='h4'font='Recoleta'>{props.title}</Typography>
+      <Typography variant='h4'font='Recoleta'>{props.header}</Typography>
       <Typography opacity={0.8}>{props.description}</Typography>
     </Wrapper>
   )
