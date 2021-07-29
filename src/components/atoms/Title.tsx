@@ -1,16 +1,12 @@
-import { PropsWithChildren } from 'react';
-
-import Typography, { Align } from './Typography';
+import Typography, { Props as TypographyProps } from './Typography';
 
 
-export interface Props extends PropsWithChildren<{}> {
-  align?: Align,
-}
+export type Props = TypographyProps
 
-export default function Title ({children, align = 'left'}: Props) {
+export default function Title (props: Props) {
   return (
-    <Typography variant='h1' align={align} paragraph>
-      {children}
+    <Typography variant='h1' paragraph {...props}>
+      {props.children}
     </Typography>
   )
 }

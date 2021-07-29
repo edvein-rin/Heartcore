@@ -1,16 +1,12 @@
-import { PropsWithChildren } from 'react'
-
-import Typography, { Align } from './Typography'
+import Typography, { Props as TypographyProps } from './Typography'
 
 
-export interface Props extends PropsWithChildren<{}> {
-  align?: Align,
-}
+export type Props = TypographyProps
 
-export default function Subtitle ({children, align='left'}: Props) {
+export default function Subtitle (props: Props) {
   return (
-    <Typography variant='h5' align={align}>
-      {children}
+    <Typography variant='h5' {...props}>
+      {props.children}
     </Typography>
   )
 }
