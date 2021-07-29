@@ -19,8 +19,8 @@ export default function Home (props: Props) {
       <HeaderSection>
         <Container>
           <Heading align='center'>
-            <Title>{props.title}</Title>
-            <Subtitle>{props.subtitle}</Subtitle>
+            <Title font='Recoleta'>{props.title}</Title>
+            <Subtitle opacity={0.8}>{props.subtitle}</Subtitle>
           </Heading>
         </Container>
       </HeaderSection>
