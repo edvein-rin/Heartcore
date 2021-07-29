@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/Heartcore/static/js/main.96811145.chunk.js",
-    "main.js.map": "/Heartcore/static/js/main.96811145.chunk.js.map",
+    "main.js": "/Heartcore/static/js/main.0148b6f7.chunk.js",
+    "main.js.map": "/Heartcore/static/js/main.0148b6f7.chunk.js.map",
     "runtime-main.js": "/Heartcore/static/js/runtime-main.694f9633.js",
     "runtime-main.js.map": "/Heartcore/static/js/runtime-main.694f9633.js.map",
     "static/css/2.679831fc.chunk.css": "/Heartcore/static/css/2.679831fc.chunk.css",
-    "static/js/2.66fefa54.chunk.js": "/Heartcore/static/js/2.66fefa54.chunk.js",
-    "static/js/2.66fefa54.chunk.js.map": "/Heartcore/static/js/2.66fefa54.chunk.js.map",
+    "static/js/2.0f9a7e12.chunk.js": "/Heartcore/static/js/2.0f9a7e12.chunk.js",
+    "static/js/2.0f9a7e12.chunk.js.map": "/Heartcore/static/js/2.0f9a7e12.chunk.js.map",
     "index.html": "/Heartcore/index.html",
     "static/css/2.679831fc.chunk.css.map": "/Heartcore/static/css/2.679831fc.chunk.css.map",
-    "static/js/2.66fefa54.chunk.js.LICENSE.txt": "/Heartcore/static/js/2.66fefa54.chunk.js.LICENSE.txt",
+    "static/js/2.0f9a7e12.chunk.js.LICENSE.txt": "/Heartcore/static/js/2.0f9a7e12.chunk.js.LICENSE.txt",
     "static/media/burger.e80ef556.svg": "/Heartcore/static/media/burger.e80ef556.svg",
     "static/media/inline-logo.933f38ae.svg": "/Heartcore/static/media/inline-logo.933f38ae.svg",
     "static/media/linkedin.404b843e.svg": "/Heartcore/static/media/linkedin.404b843e.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.694f9633.js",
     "static/css/2.679831fc.chunk.css",
-    "static/js/2.66fefa54.chunk.js",
-    "static/js/main.96811145.chunk.js"
+    "static/js/2.0f9a7e12.chunk.js",
+    "static/js/main.0148b6f7.chunk.js"
   ]
 }
