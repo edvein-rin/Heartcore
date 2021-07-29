@@ -38,4 +38,15 @@ export default createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+
+  a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+
+    transition: all 300ms ease;
+  }
+
+  a:hover {
+    color: var(--highlight-color);
+  }
 `
