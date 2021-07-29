@@ -2,6 +2,7 @@ import { PropsWithChildren } from 'react'
 import styled from 'styled-components/macro'
 
 import { Wrapper as SectionWrapper } from '../atoms/Section'
+import breakpoints from '../globals/Breakpoints'
 
 
 export interface Props extends PropsWithChildren<{}> {
@@ -23,9 +24,6 @@ export const Wrapper = styled.div<Props>`
   max-width: 1140px;
   width: 100%;
 
-  padding-left: 30px;
-  padding-right: 30px;
-
   margin-right: auto;
   margin-left: auto;
 
@@ -33,5 +31,15 @@ export const Wrapper = styled.div<Props>`
 
   ${SectionWrapper} > & {
     align-self: center;
+  }
+
+  @media ${breakpoints.down('tablet')} {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media ${breakpoints.up('tablet')} {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 `
