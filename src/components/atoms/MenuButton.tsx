@@ -1,5 +1,3 @@
-import styled from 'styled-components/macro'
-
 import Button, { Props as ButtonProps } from './Button'
 import Typography from './Typography'
 import Burger from './Burger'
