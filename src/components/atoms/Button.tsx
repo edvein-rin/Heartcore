@@ -1,14 +1,14 @@
-import { PropsWithChildren } from 'react'
 import styled, { css } from 'styled-components/macro'
 import Typography from './Typography'
 
 
-export interface Props extends PropsWithChildren<{}> {
+export interface Props {
   display?: 'block' | 'inline' | 'flex',
   variant?: 'text' | 'no-style',
   textCase?: 'lowercase' | 'uppercase' | 'capitalize' | 'none',
   bold?: boolean,
   italic?: boolean,
+  children?: React.ReactNode,
 }
 
 export default function Button ({children, display = 'block', variant = 'text', textCase = 'uppercase', bold = true, italic = false}: Props) {
