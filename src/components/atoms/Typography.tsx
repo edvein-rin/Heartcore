@@ -22,6 +22,7 @@ export const VariantTagMapping : {[variant in Variant]: React.ElementType | keyo
   'button': 'span',
   'overline': 'span',
 }
+export type Font = 'Recoleta' | 'Gilroy-Regular'
 
 export interface Props extends PropsWithChildren<{}> {
   align?: Align,
@@ -29,13 +30,15 @@ export interface Props extends PropsWithChildren<{}> {
   display?: 'inline' | 'block',
   variant?: Variant,
   paragraph?: boolean,
+  opacity?: number,
+  font?: Font,
 }
 
-export default function Typography ({children, align, color, display, variant = 'body1', paragraph = false}: Props) {
+export default function Typography ({children, align, color, display, variant = 'body1', paragraph = false, opacity = 1, font = 'Gilroy-Regular'}: Props) {
   const tag = VariantTagMapping[variant]
  
   return (
-    <Wrapper children={children} as={tag} align={align} color={color} display={display} variant={variant} paragraph={paragraph}/>
+    <Wrapper children={children} as={tag} align={align} color={color} display={display} variant={variant} paragraph={paragraph} opacity={opacity} font={font}/>
   )
 }
 
@@ -47,12 +50,13 @@ export const Wrapper = styled.span<Props>`
 
   text-align: ${({align}) => align};
   color: ${({color}) => color && 'var(--' + color + ')'};
+  opacity: ${({opacity}) => opacity};
+  font-family: ${({font}) => font};
   
   ${({variant}) => {
     switch (variant) {
       case 'h1':
         return css`
-          font-family: Recoleta, sans-serif;
           letter-spacing: ${1.5/16}rem;
           font-weight: 300;
 
@@ -85,7 +89,6 @@ export const Wrapper = styled.span<Props>`
 
       case 'h4':
         return css`
-          font-family: Recoleta, sans-serif;
           letter-spacing: ${0.25/16}rem;
           font-weight: 500;
 
