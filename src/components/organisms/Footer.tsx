@@ -7,8 +7,7 @@ import rssIcon from '../../assets/icons/rss.svg'
 
 import breakpoints from '../globals/Breakpoints'
 import Container from '../atoms/Container'
-import LinkButton from '../atoms/LinkButton'
-import SubscribeLinkButton from '../atoms/SubscribeLink'
+import ButtonLink from '../atoms/ButtonLink'
 import Typography from '../atoms/Typography'
 import FooterLink from '../atoms/FooterLink'
 import ImageLink from '../atoms/ImageLink'
@@ -20,7 +19,7 @@ export default function Footer () {
     <Wrapper>
       <FooterContainer>
         <img alt='Heartcore' src={logo}></img>
-        <SubscribeLinkButton />
+        <ButtonLink href='https://heartcore.substack.com/' color='light-orange'>subscribe to our newsletter ↗️</ButtonLink>
         
         <div className='quote'>
           <Typography color='grey' variant='h5' font='Recoleta'>
@@ -38,21 +37,21 @@ export default function Footer () {
 
         <div className='contacts'>
           <div>
-            <ImageLink alt='Twitter' src={twitterIcon} to='https://twitter.com/heartcorecap' />
+            <ImageLink alt='Twitter' src={twitterIcon} href='https://twitter.com/heartcorecap' />
             <Spacer size={20} axis='horizontal'></Spacer>
-            <ImageLink alt='Linkedin' src={linkedinIcon} to='https://www.linkedin.com/company/heartcorecapital/about/' />
+            <ImageLink alt='Linkedin' src={linkedinIcon} href='https://www.linkedin.com/company/heartcorecapital/about/' />
             <Spacer size={20} axis='horizontal'></Spacer>
-            <ImageLink alt='Twitter' src={rssIcon} to='https://heartcore.substack.com/' />
+            <ImageLink alt='Twitter' src={rssIcon} href='https://heartcore.substack.com/' />
           </div>
-          <LinkButton to='mailto:contact@heartcore.com' textCase='none' bold={false} variant='no-style'>
+          <ButtonLink href='mailto:contact@heartcore.com' textCase='none' bold={false} variant='no-style'>
             <Typography variant='body2'>contact@heartcore.com</Typography>
-          </LinkButton>
+          </ButtonLink>
         </div>
         <div className='copyright'>
           <Typography variant='body2'>All rights reserved © Heartcore</Typography>
-          <LinkButton to='https://uploads-ssl.webflow.com/6023c6394b9a4d541b90dcf4/60dc760184ef9d56a3055aca_20210630%20Privacy%20Policy%20.pdf' textCase='none' bold={false} variant='no-style'>
+          <ButtonLink href='https://uploads-ssl.webflow.com/6023c6394b9a4d541b90dcf4/60dc760184ef9d56a3055aca_20210630%20Privacy%20Policy%20.pdf' textCase='none' bold={false} variant='no-style'>
             <Typography variant='body2'>Privacy police</Typography>
-          </LinkButton>
+          </ButtonLink>
         </div>
       </FooterContainer>
     </Wrapper>
