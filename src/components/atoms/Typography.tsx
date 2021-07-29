@@ -22,7 +22,7 @@ export const VariantTagMapping : {[variant in Variant]: React.ElementType | keyo
   'button': 'span',
   'overline': 'span',
 }
-export type Font = 'Recoleta' | 'Gilroy-Regular'
+export type Font = 'Recoleta' | 'Gilroy'
 
 export interface Props extends PropsWithChildren<{}> {
   align?: Align,
@@ -146,6 +146,7 @@ export const Wrapper = styled.span<Props>`
           font-size: 0.875rem;
           letter-spacing: ${1.25/16}rem;
           font-weight: 600;
+          text-transform: uppercase;
         `
 
       case 'caption':
@@ -159,6 +160,8 @@ export const Wrapper = styled.span<Props>`
         return css`
           font-size: 0.625rem;
           letter-spacing: ${1.5/16}rem;
+          font-weight: 600;
+          text-transform: uppercase;
         `
     }
   }}
