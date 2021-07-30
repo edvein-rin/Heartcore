@@ -15,4 +15,8 @@ export default styled.a<Props>`
   }
 
   transition: all 300ms ease;
+
+  & * {
+    transition: inherit;
+  }
 `
