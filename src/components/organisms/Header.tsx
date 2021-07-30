@@ -3,22 +3,27 @@ import styled from 'styled-components/macro'
 import Container, { Props as ContainerProps } from '../atoms/Container'
 import logo from '../../assets/logo.svg'
 import MenuButton from '../atoms/MenuButton'
+import { useState } from 'react'
 
 
 export default function Header () {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+
   return (
-    <Wrapper>
+    <Wrapper menuOpen={menuOpen}>
       <HeaderContainer>
         <img alt='Heartcore' src={logo}></img>
-        <MenuButton />
+        <MenuButton onOpenChange={(open: boolean) => {setMenuOpen(open)}}/>
       </HeaderContainer>
     </Wrapper>
   )
 }
 
-export const Wrapper = styled.header`
+export const Wrapper = styled.header<{menuOpen: boolean}>`
   padding-top: 18px;
   padding-bottom: 18px;
+
+  background-color: ${({menuOpen}) => menuOpen && 'var(--light-grey)'};
 `
 
 export const HeaderContainer = styled(Container)<ContainerProps>`
