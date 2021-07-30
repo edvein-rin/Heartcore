@@ -35,6 +35,11 @@ export default createGlobalStyle`
     font-family: Gilroy, sans-serif;
   }
 
+  html.no-scroll {
+    position: fixed;
+    overflow-y: scroll;
+  }
+
   * {
     box-sizing: border-box;
   }
