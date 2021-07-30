@@ -15,4 +15,8 @@ export default styled(RouterLink)<Props>`
   }
 
   transition: all 300ms ease;
+
+  & * {
+    transition: inherit;
+  }
 `
