@@ -19,8 +19,9 @@ export default function Footer () {
     <Wrapper>
       <FooterContainer>
         <img alt='Heartcore' src={logo}></img>
-        <ButtonLink href='https://heartcore.substack.com/' color='light-orange'>subscribe to our newsletter ↗️</ButtonLink>
-        {/* TODO color and hover doesn't work */}
+        <ButtonLink href='https://heartcore.substack.com/' textColor='light-orange' textHoverColor='orange'>
+          subscribe to our newsletter ↗️
+        </ButtonLink>
         
         <div className='quote'>
           <Typography color='grey' variant='h5' font='Recoleta'>
