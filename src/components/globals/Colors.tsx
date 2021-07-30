@@ -1,12 +1,13 @@
 import { createGlobalStyle } from 'styled-components/macro'
 
 
-export type Color = 'white' | 'black' | 'light-grey' | 'grey' | 'dark-blue' | 'light-orange' | 'orange' | 'dark-orange' | 'light-yellow' | 'light-blue' | 'blue' | 'lighter-blue' | 'dark-green'
+export type Color = 'white' | 'black' | 'darker-grey' | 'light-grey' | 'grey' | 'dark-blue' | 'light-orange' | 'orange' | 'dark-orange' | 'light-yellow' | 'light-blue' | 'blue' | 'lighter-blue' | 'dark-green'
 
 export default createGlobalStyle`
   html {
     --white: #fff;
     --black: #2b2b2b;
+    --darker-grey: #222222;
     --light-grey: #edf0f7;
     --grey: #4d4d4d;
     --dark-blue: #293b78;
