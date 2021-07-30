@@ -23,22 +23,26 @@ export const VariantTagMapping : {[variant in Variant]: React.ElementType | keyo
   'overline': 'span',
 }
 export type Font = 'Recoleta' | 'Gilroy'
+export type TextCase = 'capitalize' | 'uppercase' | 'lowercase'
 
 export interface Props extends PropsWithChildren<{}> {
   align?: Align,
   color?: Color,
+  hoverColor?: Color,
   display?: 'inline' | 'block',
   variant?: Variant,
   paragraph?: boolean,
   opacity?: number,
   font?: Font,
+  textCase?: TextCase,
+  weight?: number | string,
 }
 
-export default function Typography ({children, align, color, display, variant = 'body1', paragraph = false, opacity, font}: Props) {
+export default function Typography ({children, align, color, hoverColor, display, variant = 'body1', paragraph = false, opacity, font, textCase, weight}: Props) {
   const tag = VariantTagMapping[variant]
  
   return (
-    <Wrapper children={children} as={tag} align={align} color={color} display={display} variant={variant} paragraph={paragraph} opacity={opacity} font={font}/>
+    <Wrapper children={children} as={tag} align={align} color={color} hoverColor={hoverColor} display={display} variant={variant} paragraph={paragraph} opacity={opacity} font={font} textCase={textCase} weight={weight} />
   )
 }
 
@@ -52,6 +56,10 @@ export const Wrapper = styled.span<Props>`
   color: ${({color}) => color && 'var(--' + color + ')'};
   opacity: ${({opacity}) => opacity};
   font-family: ${({font}) => font};
+
+  &:hover {
+    color: ${({hoverColor}) => hoverColor && 'var(--' + hoverColor + ')'};
+  }
   
   ${({variant}) => {
     switch (variant) {
@@ -164,5 +172,8 @@ export const Wrapper = styled.span<Props>`
           text-transform: uppercase;
         `
     }
-  }}
+  }};
+
+  text-transform: ${({textCase}) => textCase};
+  font-weight: ${({weight}) => weight}
 `
