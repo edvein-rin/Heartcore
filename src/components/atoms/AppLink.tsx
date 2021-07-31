@@ -1,11 +1,17 @@
-import { Link as RouterLink, LinkProps as RouterLinkProps } from "react-router-dom";
-import styled from "styled-components";
-
+import {
+  Link as RouterLink,
+  LinkProps as RouterLinkProps,
+} from 'react-router-dom'
+import styled from 'styled-components'
 
 export type Props = RouterLinkProps
 
 export default styled(RouterLink)<Props>`
-  &, &:link, &:visited, &:hover, &:active {
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
     text-decoration: none;
     color: inherit;
   }

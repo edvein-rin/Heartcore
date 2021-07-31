@@ -1,5 +1,12 @@
-export type Size = 'mobileS' | 'mobileM' | 'mobileL' | 'tablet' | 'laptop' | 'laptopL' | 'desktop'
-export type Sizes = {[size in Size]: string}
+export type Size =
+  | 'mobileS'
+  | 'mobileM'
+  | 'mobileL'
+  | 'tablet'
+  | 'laptop'
+  | 'laptopL'
+  | 'desktop'
+export type Sizes = { [size in Size]: string }
 
 export const sizes: Sizes = {
   mobileS: '320px',
@@ -12,9 +19,9 @@ export const sizes: Sizes = {
 }
 
 export interface Breakpoints {
-  up (size: Size): string,
-  down (size: Size): string,
-  only (size: Size): string,
+  up(size: Size): string
+  down(size: Size): string
+  only(size: Size): string
 }
 
 const breakpoints: Breakpoints = {

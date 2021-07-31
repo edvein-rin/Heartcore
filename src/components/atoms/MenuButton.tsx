@@ -7,12 +7,11 @@ import Burger from './Burger'
 import Spacer from './Spacer'
 import Menu from '../organisms/Menu'
 
-
 export interface Props extends ButtonProps {
-  onOpenChange(open: boolean): void, 
+  onOpenChange(open: boolean): void
 }
 
-export default function MenuButton ({onOpenChange}: Props) {
+export default function MenuButton({ onOpenChange }: Props) {
   const [open, setOpen] = useState<boolean>(false)
 
   useEffect(() => {
@@ -27,14 +26,20 @@ export default function MenuButton ({onOpenChange}: Props) {
 
   return (
     <>
-      <Button variant='no-style' onClick={() => {setOpen(!open); onOpenChange(!open)}}>
+      <Button
+        variant='no-style'
+        onClick={() => {
+          setOpen(!open)
+          onOpenChange(!open)
+        }}
+      >
         <Wrapper>
           <Burger />
           <Spacer size={10} axis='horizontal' />
           <Typography variant='button'>Menu</Typography>
         </Wrapper>
       </Button>
-      <Menu open={open}/>
+      <Menu open={open} />
     </>
   )
 }

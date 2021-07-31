@@ -1,7 +1,20 @@
 import { createGlobalStyle } from 'styled-components/macro'
 
-
-export type Color = 'white' | 'black' | 'darker-grey' | 'light-grey' | 'grey' | 'dark-blue' | 'light-orange' | 'orange' | 'dark-orange' | 'light-yellow' | 'light-blue' | 'blue' | 'lighter-blue' | 'dark-green'
+export type Color =
+  | 'white'
+  | 'black'
+  | 'darker-grey'
+  | 'light-grey'
+  | 'grey'
+  | 'dark-blue'
+  | 'light-orange'
+  | 'orange'
+  | 'dark-orange'
+  | 'light-yellow'
+  | 'light-blue'
+  | 'blue'
+  | 'lighter-blue'
+  | 'dark-green'
 
 export default createGlobalStyle`
   html {

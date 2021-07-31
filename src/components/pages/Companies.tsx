@@ -1,12 +1,7 @@
 import styled from 'styled-components/macro'
 
-
-export default function Companies () {
-  return (
-    <Wrapper>
-      Companies Page
-    </Wrapper>
-  )
+export default function Companies() {
+  return <Wrapper>Companies Page</Wrapper>
 }
 
 export const Wrapper = styled.div`

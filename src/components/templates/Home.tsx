@@ -7,23 +7,19 @@ import Section from '../atoms/Section'
 import Heading from '../molecules/Heading'
 import Card from '../molecules/Card'
 
-
 export interface Props {
-  header: string,
-  subtitle: string,
+  header: string
+  subtitle: string
 }
 
+export default function Home(props: Props) {
+  const { header, subtitle } = props
 
-export default function Home (props: Props) {
   return (
     <Wrapper>
       <HeaderSection>
         <Container>
-          <Heading
-            align='center'
-            header={props.header}
-            subtitle={props.subtitle}
-          />
+          <Heading align='center' header={header} subtitle={subtitle} />
         </Container>
       </HeaderSection>
       <CardsSection>
@@ -35,7 +31,7 @@ export default function Home (props: Props) {
             image={aboutCardImage}
             bgColor='blue'
             textColor='white'
-            noise={true}
+            noise
           />
           <Card
             overline='thesis'
@@ -44,16 +40,20 @@ export default function Home (props: Props) {
             image={aboutCardImage}
             bgColor='light-grey'
             textColor='grey'
-            noise={true}
+            noise
           />
           <Card
             overline='companies'
-            header={<span>Our <em>raison d'être</em></span>}
+            header={
+              <span>
+                Our <em>raison d&#39;être</em>
+              </span>
+            }
             description="We're proud to have been among the first investors in 85 category-defining consumer technology companies"
             image={aboutCardImage}
             bgColor='light-orange'
             textColor='dark-orange'
-            noise={true}
+            noise
           />
           <Card
             overline='team'
@@ -62,7 +62,7 @@ export default function Home (props: Props) {
             image={aboutCardImage}
             bgColor='light-yellow'
             textColor='dark-orange'
-            noise={true}
+            noise
           />
           <Card
             overline='values'
@@ -71,7 +71,7 @@ export default function Home (props: Props) {
             image={aboutCardImage}
             bgColor='light-blue'
             textColor='blue'
-            noise={true}
+            noise
           />
           <Card
             overline='insights'
@@ -80,9 +80,9 @@ export default function Home (props: Props) {
             image={aboutCardImage}
             bgColor='lighter-blue'
             textColor='dark-green'
-            noise={true}
+            noise
           />
-        </CardsContainer> 
+        </CardsContainer>
       </CardsSection>
     </Wrapper>
   )

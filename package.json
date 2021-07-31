@@ -7,7 +7,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -19,6 +20,7 @@
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.8",
     "@types/styled-components": "^5.1.11",
+    "eslint-config-airbnb-typescript": "^12.3.1",
     "normalize.css": "^8.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -31,8 +33,40 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "airbnb-typescript",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:import/recommended",
+      "plugin:import/typescript"
+    ],
+    "rules": {
+      "semi": 0,
+      "jsx-quotes": "off",
+      "object-curly-newline": "off",
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".tsx"
+          ]
+        }
+      ],
+      "react/jsx-props-no-spreading": 0,
+      "react/react-in-jsx-scope": 0,
+      "react/jsx-wrap-multilines": 0,
+      "react/jsx-one-expression-per-line": 0,
+      "import/extensions": 0,
+      "import/no-unresolved": 0,
+      "no-multiple-empty-lines": 0,
+      "linebreak-style": "off",
+      "@typescript-eslint/no-use-before-define": "off",
+      "@typescript-eslint/semi": "off",
+      "@typescript-eslint/comma-dangle": "off"
+    },
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
   },
   "browserslist": {
     "production": [
@@ -47,7 +81,12 @@
     ]
   },
   "devDependencies": {
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "gh-pages": "^3.2.3",
+    "prettier": "^2.3.2",
     "serve": "^12.0.0"
   }
 }

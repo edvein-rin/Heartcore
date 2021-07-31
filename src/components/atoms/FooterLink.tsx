@@ -1,15 +1,13 @@
-import AppLinkButton, { Props as LinkButtonProps } from "./AppButtonLink"
 import styled from 'styled-components/macro'
-
+import AppLinkButton, { Props as LinkButtonProps } from './AppButtonLink'
 
 export type Props = LinkButtonProps
 
-export default function FooterLink (props: Props) {
+export default function FooterLink(props: Props) {
+  const { children } = props
   return (
     <Wrapper>
-      <AppLinkButton {...props}>
-        {props.children}
-      </AppLinkButton>
+      <AppLinkButton {...props}>{children}</AppLinkButton>
     </Wrapper>
   )
 }

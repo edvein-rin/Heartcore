@@ -1,12 +1,7 @@
 import styled from 'styled-components/macro'
 
-
-export default function Insights () {
-  return (
-    <Wrapper>
-      Insights Page
-    </Wrapper>
-  )
+export default function Insights() {
+  return <Wrapper>Insights Page</Wrapper>
 }
 
 export const Wrapper = styled.div`
